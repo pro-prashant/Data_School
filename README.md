@@ -60,9 +60,9 @@ You can start editing the page by modifying app/page.js or any page under pages/
 
 Live Demo
 
-Deployed on Vercel: Your Live Link
+Deployed on Vercel: https://data-school.vercel.app
 
-MySQL Database Hosted on Railway
+
 
 Learn More
 
