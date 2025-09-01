@@ -1,10 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+School Directory Mini Project
 
-## Getting Started
+This is a Next.js
+ project bootstrapped with create-next-app
+ and integrated with MySQL to manage school data.
+
+Features (CRUD)
+
+This project implements full CRUD functionality for school data:
+
+Add School – Input and store school data in the database, including image upload.
+
+Show Schools – Fetch and display schools in a card layout similar to an e-commerce product listing.
+
+Update School – Edit existing school details.
+
+Delete School – Remove a school from the database.
+
+Tech Stack
+
+Frontend: Next.js, React
+
+Backend & Database: MySQL
+
+Form Handling: react-hook-form
+
+Image Storage: Local folder /public/schoolImages
+
+Deployment: MySQL database hosted on Railway, Next.js hosted on Vercel
+
+MySQL Table Structure
+CREATE TABLE schools (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name TEXT NOT NULL,
+    address TEXT NOT NULL,
+    city TEXT NOT NULL,
+    state TEXT NOT NULL,
+    contact BIGINT NOT NULL,
+    image TEXT,
+    email_id TEXT NOT NULL
+);
+
+Getting Started
 
 First, run the development server:
 
-```bash
 npm run dev
 # or
 yarn dev
@@ -12,25 +51,32 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open http://localhost:3000
+ in your browser to see the app.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You can start editing the page by modifying app/page.js or any page under pages/. The page auto-updates as you edit the file.
 
-## Learn More
+Live Demo
 
-To learn more about Next.js, take a look at the following resources:
+Deployed on Vercel: Your Live Link
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+MySQL Database Hosted on Railway
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Learn More
 
-## Deploy on Vercel
+To learn more about Next.js, check out the following resources:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Next.js Documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Learn Next.js
+ - interactive tutorial
+
+Next.js GitHub Repository
+
+Deployment
+
+Next.js App: Deployed on Vercel
+
+MySQL Database: Hosted on Railway
