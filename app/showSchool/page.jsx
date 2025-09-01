@@ -2,6 +2,7 @@
 "use client";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const ShowSchool = () => {
   const [schools, setSchools] = useState([]);
@@ -33,8 +34,9 @@ const ShowSchool = () => {
   // ✅ Delete Function 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`/api/DeleteData/${id}`);
+      const response = await axios.delete(`/api/deleteData/${id}`);
       if (response.data.success) {
+        toast("Deleted Data")
         alert("School deleted successfully");
         handleGetListing();
       }
@@ -73,10 +75,10 @@ const ShowSchool = () => {
       formData.append("email_id", email);
       if (image) formData.append("image", image);
 
-      await axios.put(`/api/UpdateData/${editingId}`, formData, {
+      await axios.put(`/api/updateData/${editingId}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-
+      toast.success("Updated Data");
       alert("School updated successfully");
       setEditingId(null);
       handleGetListing();
